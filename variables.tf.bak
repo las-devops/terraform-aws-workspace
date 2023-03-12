@@ -1,0 +1,80 @@
+#######################
+# Variables
+#######################
+
+variable "bundle_id" {
+  description = "id of bunlde"
+  type        = string
+  default     = "wsb-bh8rsxt14"
+}
+
+variable "user_name" {
+  description = "name user for directory"
+  type        = string
+  default     = "Administrator"
+}
+
+
+variable "root_volume_encryption_enabled" {
+  description = "This root volume encryption enabled"
+  type        = bool
+  default     = true
+}
+
+variable "user_volume_encryption_enabled" {
+  description = "This user volume encryption enabled"
+  type        = bool
+  default     = true
+}
+
+variable "volume_encryption_key" {
+  description = "key for encryption volume"
+  type        = string
+  default     = "alias/aws/workspaces"
+  sensitive   = true
+}
+
+
+variable "compute_type_name" {
+  description = "key for encryption volume"
+  type        = string
+  default     = ""
+}
+
+variable "user_volume_size_gib" {
+  description = "key for encryption volume"
+  type        = number
+  default     = ""
+}
+
+
+variable "root_volume_size_gib" {
+  description = "key for encryption volume"
+  type        = number
+  default     = ""
+}
+
+
+variable "running_mode" {
+  description = "key for encryption volume"
+  type        = string
+  default     = ""
+}
+
+variable "running_mode_auto_stop_timeout_in_minutes" {
+  description = "key for encryption volume"
+  type        = number
+  default     = ""
+}
+
+variable "workspace_properties" {
+  description = "This is to help you add tags to your cloud objects"
+  type        = map(any)
+  default     = {}
+}
+
+variable "tags" {
+  description = "This is to help you add tags to your cloud objects"
+  type        = map(string)
+  default     = {}
+}
